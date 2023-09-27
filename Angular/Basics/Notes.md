@@ -14,6 +14,7 @@ ng serve (to test)
 
 *Looks like I can copy a project into another folder w/o interferrance. Success!*
 
+
 #### 1. How an Angular App gets Loaded and Started
 
 Index.html file is the main file... Angular is linking to the component html.
@@ -175,6 +176,69 @@ Event Binding ((event)="expression")
 
 Combination of Both: Two-Way-Binding ([(ngModel)]="data")
 
-#### 11. 
+#### 11. String Interpolation
 
-#### 12. 
+![Adding Items to Server Components](image-11.png)
+Notice: don't have to list number or string, those are inferred
+
+Okay, so this is showing that we can add statuses from different servers
+
+![String Interpolation](image-12.png)
+
+#### 12. Property Binding
+
+![SUPER teensy button](super-teensy-button.png)
+
+*the button was teensy b/c there was no text put into it!*
+
+Hmm... I guess reinstalling bootstrap didn't solve the styling issue. Oh well, at least I'm certain it's installed!
+
+[] <-- This tells Angular we are "property-binding". Want to dynamically bind some property, disable some html attribute
+
+Ah! So it takes a sec for the button to become active, because it's updating dynamically
+
+#### 13. Property Binding vs String Interpolation
+
+You can do EITHER line to get the boolean to print on the page
+
+![Boolean image](image-13.png)
+
+String interpolation: Just print some text to your page, use this one (this is the plain paragraph one)
+
+<p>{{ allowNewServer }}</p>
+
+Property-Binding: Want to change some property, off html element or a directive or component (this is binding it with the property paragraph)
+
+<p [innerText]="allowNewServer"></p>
+
+*String interpolation ONLY works in a normal template, not within another expression of that template, like in property binding*
+
+#### 14. Event Binding
+
+Event binding uses ()=""
+
+![Finished event binding](image-14.png)
+
+#### 15. Passing and Using Data with Event Binding
+
+($event) is SUPER important, reserved variable name you can use in the template when using event binding. The data emitted with that event
+
+![Alt text](image-15.png)
+
+We can *emphasize* that we are using the HTML Input Element event target here. Since it's being finicky.
+
+**Yay! Now we've made it so we log the data in real time**
+
+![Alt text](image-16.png)
+
+
+#### 16. Two-Way-Databinding
+
+**Important: For Two-Way-Binding (covered in this lecture) to work, you need to enable the ngModel directive. This is done by adding the FormsModule to the imports[] array in the AppModule.**
+
+You then also need to add the import from @angular/forms in the app.module.ts file:
+
+import { FormsModule } from '@angular/forms';
+
+
+
