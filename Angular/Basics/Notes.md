@@ -240,5 +240,137 @@ You then also need to add the import from @angular/forms in the app.module.ts fi
 
 import { FormsModule } from '@angular/forms';
 
+![Alt text](image-17.png)
+
+*note to self, be sure to get rid of the <p> tag b/c it does some funkiness to the bound data*
+
+![Weirdness to text](image-18.png)
+
+#### 17. Combining all Forms of Databinding
+
+![Alt text](image-19.png)
 
 
+#### 18. Assignment: Data & Event Binding (Problem)
+
+1. Add an input field which updates a property ('username') via Two-Way-Binding
+
+*I'm going to do this in the success-alert server*
+
+![This](image-21.png) (the hr to form control portion at bottom)
+
+![Makes this](image-20.png)
+
+2. Output the username property via String Interpolation (in a paragraph below the input)
+
+![Alt text](image-22.png)
+
+![Alt text](image-23.png)
+
+3. Add a button which may only be clicked if the username is NOT an empty string
+
+![Alt text](image-24.png)
+
+![Disabled w/ empty field](image-25.png)
+
+![Enabled w/ field](image-26.png)
+
+4. Upon clicking the button, the username should be reset to an empty string
+
+![Resets username upon button click](image-27.png)
+
+Okay! Now the button clicks and it gives an empty field...
+
+
+#### 19. Understanding Directives
+
+Directives are instructions in the DOM
+
+Components are kinda such instructions in the DOM
+
+<p appTurnGreen>Recieves a green background!</p>
+
+![Alt text](image-28.png)
+
+#### 20. Using ngIf to Output Data Conditionally
+
+![Alt text](image-30.png)
+
+You NEED the little star
+*ngIf=""
+
+
+#### 21. Enhancing ngIf with an Else Condition
+
+*Local reference (will be discussed LATER)*
+#=""
+
+![Alt text](image-31.png)
+
+#### 22. Styling Elements Dynamically with ngStyle
+
+Unlike structural directives, attribute directives don't add or remove elements. They only change the element they were placed on
+
+![Alt text](image-32.png)
+
+Need property binding on ngStyle to style our notifications for the servers
+
+*Note: Directive and property binding are NOT the same thing*
+
+![Alt text](image-33.png)
+
+Now when you click refresh it will change the background like a coin toss
+
+#### 23. Applying CSS Classes Dynamically with ngClass
+
+{} <-- JS Object
+
+![Alt text](image-34.png)
+
+Okie dokie! So now the font for the online portion is on.
+
+#### 24. Outputting Lists with ngFor
+
+*ngFor=""
+
+define a temp variable, give it any name
+
+<app-server *ngFor="let server of servers"></app-server>
+
+![Alt text](image-35.png)
+
+NEAT! It makes more "servers". Server farm heh.
+
+#### 25. Assignment: Directives (Problem)
+
+1. Add a button which says 'Display Details'
+
+![Alt text](image-37.png)
+
+2. Add a paragraph with any content of your choice
+
+![Alt text](image-38.png)
+
+3. Toggle the displaying of that paragraph with the button created in the first step
+
+![Alt text](image-36.png)
+
+4. Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)
+
+![Alt text](image-39.png)
+
+5. Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)
+
+![Getting there](image-40.png)
+
+![Completed](image-41.png)
+
+
+#### 26. Getting the Index when using ngFor
+
+![Checking to see this works](image-42.png)
+
+the little extra something something to replace bigger words with an index
+![Alt text](image-43.png)
+
+![Alt text](image-44.png)
